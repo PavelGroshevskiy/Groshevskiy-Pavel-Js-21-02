@@ -22,11 +22,40 @@ html {
   color: aliceblue;
   padding: 15px 40px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__title {
   padding-right: 10px;
   font-size: 21px;
+}
+
+.header__loader {
+  display: flex;
+  padding: 10px;
+  z-index: 1;
+}
+
+.header__first-ball,
+.header__second-ball,
+.header__third-ball {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: 1px solid white;
+  background-color: #fff;
+  z-index: 1;
+  margin-right: 5px;
+}
+
+.header__first-ball,
+.header__third-ball {
+  animation: loader_1 1s alternate infinite ease-in-out;
+}
+
+.header__second-ball {
+  animation: loader_2 1s alternate infinite ease-in-out;
 }
 
 .wrapper__grid {
@@ -118,6 +147,10 @@ html {
   border: none;
 }
 
+.main__items-img:hover {
+  animation: color 5s 0.3 forwards;
+}
+
 .main__items-fish {
   position: relative;
   overflow: hidden;
@@ -182,5 +215,29 @@ html {
   .main__items-fish {
     width: 160px;
     height: 110px;
+  }
+}
+
+@keyframes color {
+  to {
+    background-color: rgb(57, 60, 207);
+  }
+}
+
+@keyframes loader_1 {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes loader_2 {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
   }
 }
