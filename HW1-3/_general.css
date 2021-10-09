@@ -1,0 +1,11 @@
+:root {
+  --bgColor: #121212;
+  --fonts-main: 14px;
+  --bgFontDarkTheme: white;
+  --bgHeader: rgb(105, 94, 94);
+
+  /* --bgColor: rgb(250, 243, 243);
+  --fonts-main: 14px;
+  --bgMain: white;
+  --darkTheme: black; */
+}
