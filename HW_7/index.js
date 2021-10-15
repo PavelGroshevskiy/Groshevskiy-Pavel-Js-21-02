@@ -47,73 +47,145 @@
 // }
 // const dog = {
 //   __proto__: animal,
-//   name: "Dog"
+//   name: "Dog",
+//     say () {
+//       console.log(`известное животное молчит`)
+//     }
 // }
 // const parrot = {
 //   __proto__: animal,
-//   name: "Parrot"
+//   name: "Parrot",
+//   say () {
+//     console.log(`животное молчит`)
+// }
 // }
 
-
-
-// Object.freeze(animal)
 
 // console.log(Object.getOwnPropertyDescriptor(animal, "eat"))
 
 //                    second 2
-function Animal(name) {
-    this.name = name;
-    this.eat = function() {
-      console.log(`${this.name} eat`)
-    };
-    this.say = function() {
-      console.log(`неизвестное животное молчит`)
-    };
-    this.rename = function(newName) {
-      if (/^([а-яА-Я]?)+((\s|-)?)+([а-яА-Я]?)+/.test(newName)) {
-        return this.name = newName
-      } else {
-        return this.name
-      }
-  };
-  Object.defineProperties(this, {
-    say: {
-      configurable: false,
-      enumerable: false 
-    },
-    eat: {
-      configurable: false,
-      enumerable: false
-    },
-    rename: {
-      configurable: false,
-      enumerable: false
-    }
-  })
-}
+// function Animal(name) {
+//     this.name = name;
+//     this.eat = function() {
+//       console.log(`${this.name} eat`)
+//     };
+//     this.say = function() {
+//       console.log(`неизвестное животное молчит`)
+//     };
+//     this.rename = function(newName) {
+//       if (/^([а-яА-Я]?)+((\s|-)?)+([а-яА-Я]?)+/.test(newName)) {
+//         return this.name = newName
+//       } else {
+//         return this.name
+//       }
+//   };
+//   Object.defineProperties(this, {
+//     say: {
+//       configurable: false,
+//       enumerable: false 
+//     },
+//     eat: {
+//       configurable: false,
+//       enumerable: false
+//     },
+//     rename: {
+//       configurable: false,
+//       enumerable: false
+//     }
+//   })
+// }
 
-  function Cat (name) {
-      Animal.call(this, name);
-      this.name = name;
+//   function Cat (name) {
+//       Animal.call(this, name);
+//       this.name = name;
 
-      this.hunt = function () {
-        console.log(`${this.name} охотится`)
-      }
-    }
-    const cat = new Cat('Meow')
+//       this.hunt = function () {
+//         console.log(`${this.name} охотится`)
+//       }
+//     }
+//     const cat = new Cat('Meow')
 
-  cat.eat()
-  cat.hunt()
+//   cat.eat()
+//   cat.hunt()
 
-    function Dog (name) {
-      Animal.call(this, name);
-      this.name = name;
-    }
-    const dog = new Dog('Gav Gav Mother Fuckers')
+//     function Dog (name) {
+//       Animal.call(this, name);
+//       this.name = name;
+//     }
+//     const dog = new Dog('Gav Gav Mother Fuckers')
 
-  dog.eat()
+//   dog.eat()
 
-    function Parrot (name) {
-      Animal.call(this, name);
-      this.name = name;
-    }
+//     function Parrot (name) {
+//       Animal.call(this, name);
+//       this.name = name;
+//     }
+//                    second 3
+
+// class Animal {
+//   constructor(name) {
+//     this.name = name
+//     }
+  
+//   eat () {
+//       console.log(`${this.name} eat`)
+//   }
+//   say () {
+//       console.log(`неизвестное животное молчит`)
+//   }
+//   rename(newName) {
+//       if (/^([а-яА-Я]?)+((\s|-)?)+([а-яА-Я]?)+/.test(newName)) {
+//         return this.name = newName
+//       } else {
+//         return this.name
+//       }
+//   }
+// }
+
+// Object.defineProperties(Animal.prototype, {
+//       say: {
+//         configurable: false,
+//         enumerable: false 
+//       },
+//       eat: {
+//         configurable: false,
+//         enumerable: false
+//       },
+//       rename: {
+//         configurable: false,
+//         enumerable: false
+//       }
+//     })
+
+//   class Cat extends Animal { 
+//     constructor(name){
+//     super(name)
+//   }
+//     hunt () {
+//       console.log(`${this.name} охотится`)
+//     }
+//     say () {
+//       console.log(`${this.name} животное молчит`)
+//   }
+//   }
+
+//   const cat = new Cat("Meow")
+//   console.log(cat.say())
+//   class Dog extends Animal { 
+//     constructor(name){
+//     super(name)
+    
+//   }
+//   say () {
+//     console.log(`${this.name} животное молчит`)
+// }
+// }
+
+//   class Parrot extends Animal { 
+//     constructor(name){
+//       super(name)
+//   }
+//   say () {
+//     console.log(`${this.name} животное молчит`)
+// }
+// }
