@@ -1,0 +1,14 @@
+.table {
+  border: 1px black solid;
+  margin: 10px;
+}
+td {
+  border: 1px black solid;
+}
+
+.changeColor1,
+.changeColor2,
+.changeColor3 {
+  display: block;
+  margin: 10px;
+}
