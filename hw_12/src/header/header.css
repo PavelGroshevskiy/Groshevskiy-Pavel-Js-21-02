@@ -1,0 +1,155 @@
+html {
+  background-color: rgb(233, 233, 233);
+}
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 100%;
+  position: relative;
+}
+
+.header__top {
+  background-color: rgb(61, 161, 66);
+  color: rgb(26, 77, 122);
+  padding: 5px 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__title {
+  padding-right: 10px;
+  font-size: 18px;
+}
+
+.wrapper__grid {
+  display: grid;
+  grid-template-columns: [col-1] 240px [col-2] 1fr;
+  grid-column-gap: 10px;
+  justify-content: stretch;
+}
+
+.aside {
+  max-width: 240px;
+  background-color: var(--bgColor);
+}
+
+.aside__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside__block-title {
+  padding-left: 10px;
+  display: block;
+}
+
+.aside__block-label {
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  height: 100%;
+}
+
+.main__header {
+  margin-bottom: 20px;
+}
+
+.main__header-title {
+  font-size: 25px;
+  padding: 10px 0;
+}
+
+.main__header-subtitle {
+  font-size: var(--fonts-main);
+}
+
+.main__fish {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.main__fish-block {
+  background-color: var(--bgColor);
+  padding: 10px;
+}
+
+.main__fish-reffer {
+  text-decoration: underline;
+  font-size: var(--fonts-main);
+}
+
+.main__fish-text {
+  color: darkgrey;
+  font-size: var(--fonts-main);
+}
+
+.main__popular {
+  padding: 15px 0;
+  font-size: 21px;
+}
+
+.main__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+#grid > div {
+  background-color: var(--bgColor);
+  padding: 20px 10px;
+}
+
+.main__items-img {
+  width: 60px;
+  height: 70px;
+  background-color: rgb(161, 159, 159);
+  border: none;
+}
+
+.main__items-img:hover {
+  animation: color 5s 0.3 forwards;
+}
+
+.main__items-fish {
+  position: relative;
+  overflow: hidden;
+}
+
+.main__items-reffer {
+  display: block;
+  position: absolute;
+  bottom: 74;
+  left: 79;
+}
+
+.main__items-btn {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  left: 80px;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer__wrapper {
+  background-color: var(--bgColor);
+  width: 800px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
