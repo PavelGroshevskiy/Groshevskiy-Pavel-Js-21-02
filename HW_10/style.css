@@ -1,0 +1,22 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 30%;
+}
+
+.loader {
+  width: 300px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.loader-box {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(105, 87, 87);
+  position: relative;
+}
