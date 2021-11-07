@@ -1,0 +1,11 @@
+.comments-form__comments {
+  margin-bottom: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comment_dark {
+  background-color: #282c34;
+  color: white;
+}
