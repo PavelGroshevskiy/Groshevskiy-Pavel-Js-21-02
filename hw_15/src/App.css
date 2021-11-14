@@ -1,0 +1,8 @@
+.body {
+  display: flex;
+  padding: 10px;
+}
+.content {
+  flex-grow: 2;
+  padding-left: 10px;
+}
