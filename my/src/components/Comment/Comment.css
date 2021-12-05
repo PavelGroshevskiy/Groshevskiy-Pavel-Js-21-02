@@ -1,0 +1,20 @@
+.comment {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: black;
+}
+
+.comment__like {
+  text-align: right;
+  cursor: pointer;
+}
+
+.comment__user-name {
+  font-size: 14px;
+  text-align: left;
+}
+
+.text-liked {
+  color: coral;
+}

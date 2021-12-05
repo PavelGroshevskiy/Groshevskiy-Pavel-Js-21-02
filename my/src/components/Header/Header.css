@@ -1,0 +1,14 @@
+.header {
+  text-align: left;
+  background-color: lightcyan;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__dark {
+  background-color: rgb(31, 36, 33);
+  color: white(39, 42, 49);
+}
