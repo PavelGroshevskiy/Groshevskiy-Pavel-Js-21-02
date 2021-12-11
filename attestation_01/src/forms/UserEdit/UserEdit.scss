@@ -1,0 +1,67 @@
+@import "../../scss/constants";
+@import "../../scss/classes";
+
+.user-edit {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  @extend .mount;
+  padding: 1em;
+  width: 520px;
+  max-width: 768px;
+
+  &__avatar {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 12px;
+    background-clip: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__avatar_controls {
+    text-align: center;
+  }
+
+  &__save {
+    @extend .primary-button;
+    width: 100%;
+  }
+
+  &__hide {
+    display: none;
+  }
+  &_theme-dark {
+    @extend .mount_theme-dark;
+
+    & .user-edit__save {
+      @extend .primary-button_dark;
+    }
+
+    & label {
+      color: $base-color_dark;
+    }
+
+    & input:disabled {
+      color: $base-color_dark;
+    }
+    & .user-edit__avatar-upload {
+      @extend .primary-button_dark;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm) - 1 ) {
+    padding: 0.5em;
+    width: 100%;
+    &__avatar_controls button {
+      max-width: 45%;
+    }
+    &__avatar_controls button span {
+      width: 75%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}

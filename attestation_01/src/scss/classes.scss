@@ -1,0 +1,53 @@
+@import 'constants';
+
+.shadow {
+  -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  &_dark {
+    -webkit-box-shadow: 4px 4px 8px 0 rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0 rgba(255, 255, 255, 0.2);
+    box-shadow: 4px 4px 8px 0 rgba(255, 255, 255, 0.2);
+  }
+}
+
+.mount {
+  color: $base-color;
+  background-color: $base-background;
+  border: $base-border;
+  border-radius: $base-radius*2;
+  @extend .shadow;
+
+  &_theme-dark {
+    color: $base-color_dark;
+    background-color: $base-background_dark;
+    border: $base-border_dark;
+    @extend .shadow_dark;
+  }
+}
+
+.link-gray {
+  color: #777;
+  &_dark {
+    color: #aaa;
+  }
+}
+
+.primary-button {
+  color: $base-color_dark;
+  background: $base-background_dark;
+  border: $base-border;
+  &:hover {
+    background: $primary-btn-background;
+  }
+  &_dark {
+    background: $primary-btn-background_dark;
+    border: $base-border_dark;
+    &:hover {
+      background: $primary-btn-background;
+    }
+  }
+
+}
+
+

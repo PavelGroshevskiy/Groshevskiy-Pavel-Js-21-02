@@ -1,0 +1,49 @@
+@import "./scss/constants";
+.App {
+  font-family: Tahoma, serif;
+  font-size: medium;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr 50px;
+  grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  grid-gap: 10px;
+  margin: 0 auto;
+  align-items: stretch;
+  padding: 0.25em 0.5em 1em 1em;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+
+  &__container {
+    flex: 1;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, lg) - 1 ) {
+    width: 100%;
+    padding: 0;
+    gap: 0.5em;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, md) - 1 ) {
+    width: 100%;
+    padding: 0;
+    gap: 0.5em;
+    font-size: small;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xxl)) and (max-width: map-get($grid-breakpoints, xxx) - 1 ) {
+    width: 1400px;
+    padding: 0;
+    gap: 0.5em;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xxx)) and (max-width: map-get($grid-breakpoints, inf) - 1 ) {
+    width: 1800px;
+    padding: 0;
+    gap: 0.5em;
+  }
+}
+

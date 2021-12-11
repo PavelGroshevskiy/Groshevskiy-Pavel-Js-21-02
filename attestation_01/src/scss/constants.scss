@@ -1,0 +1,25 @@
+$base-color: black;
+$base-background: white;
+$base-border: solid 1px lightgrey;
+$base-radius: 6px;
+
+$base-color-gray: #ddd;
+$base-color-gray_dark: #444;
+
+$base-color_dark: white;
+$base-background_dark: black;
+$base-border_dark: solid 1px #777;
+
+$primary-btn-background: #40a9ff;
+$primary-btn-background_dark: #444;
+
+$grid-breakpoints: (
+        xs: 0px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px,
+        xxx: 2000px,
+        inf: 3840px,
+);
