@@ -1,0 +1,61 @@
+@import "../../scss/constants";
+.post-list {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    grid-gap: 0.5em;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__pager {
+    color: black;
+    padding: 2em;
+    text-align: right;
+  }
+  &_theme-dark &__pager {
+    filter: invert(100%);
+  }
+
+
+  &__show {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+      width: 100%;
+      @media (min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg) - 1 ) {
+        padding: 0.5em;
+        width: calc(50% - 0.25em);
+      }
+      @media (min-width: map-get($grid-breakpoints, lg)) and (max-width: map-get($grid-breakpoints, xl) - 1 ) {
+        width: calc(33.3% - 0.375em);
+      }
+      @media (min-width: map-get($grid-breakpoints, xl)) and (max-width: map-get($grid-breakpoints, xxx) - 1 ) {
+        width: calc(25% - 0.5em);
+      }
+      @media (min-width: map-get($grid-breakpoints, xxx)) and (max-width: map-get($grid-breakpoints, inf) - 1 ) {
+        width: calc(20% - 0.5em);
+      }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm) - 1 ) {
+    &__container {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      gap: 0.2em;
+    }
+  }
+}

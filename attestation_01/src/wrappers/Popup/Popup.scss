@@ -1,0 +1,17 @@
+@import "../../scss/constants";
+@import "../../scss/classes";
+
+.component-with-helper {
+    position: relative;
+    &:hover {
+        cursor: help;
+    }
+}
+
+.component-with-helper__helper {
+    font-size: smaller;
+    position: absolute;
+    top: -1em;
+    width: 100%;
+    transition: 0.5s;
+}

@@ -1,0 +1,57 @@
+@import "../../scss/constants";
+@import "../../scss/classes";
+
+.register {
+  margin: auto;
+  @extend .mount;
+  padding: 2em;
+  max-width: 640px;
+
+  &__title {
+    text-align: center;
+    width: 100%
+  }
+
+  &__footer {
+    text-align: center;
+    width: 100%
+  }
+
+  &__link {
+    font-size: smaller;
+    @extend .link-gray;
+  }
+
+  &__gender {
+    text-align: center;
+  }
+
+  &__button {
+   @extend .primary-button;
+    width: 100%;
+  }
+
+  &_theme-dark {
+    @extend .mount_theme-dark;
+
+    & h3, & label {
+      color: $base-color_dark;
+    }
+
+    & .register__link {
+      @extend .link-gray_dark;
+    }
+
+    & .register__button {
+      @extend .primary-button_dark;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm) - 1 ) {
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    flex: 1;
+    width: 100vw;
+  }
+}

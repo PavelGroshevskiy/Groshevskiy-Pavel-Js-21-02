@@ -1,0 +1,120 @@
+@import '../../scss/constants';
+@import '../../scss/classes';
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3em;
+  align-items: center;
+  padding: 1em;
+  width: 100%;
+  @extend .mount;
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, md) - 1) {
+    border-radius: 0px;
+  }
+
+  &_hover:hover {
+    background: $primary-btn-background;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__vertical {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: $base-radius * 4;
+    width: 100%;
+  }
+
+  &__spacer {
+    flex: 1;
+  }
+
+  &__avatar {
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: $base-radius * 2;
+    background-clip: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &_vertical {
+      @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm) - 1) {
+        width: 100%;
+      }
+      @media (min-width: map-get($grid-breakpoints, sm)) and (max-width: map-get($grid-breakpoints, xl) - 1) {
+        width: 280px;
+      }
+      aspect-ratio: 1;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    column-gap: $base-radius * 2;
+  }
+
+  &__field {
+    font-weight: normal;
+    font-size: smaller;
+  }
+
+  &_theme-dark {
+    @extend .mount_theme-dark;
+    & h4 {
+      color: $base-color_dark;
+    }
+    & button {
+      @extend .primary-button_dark;
+    }
+  }
+
+  &__container > div > span:first-child {
+    display: inline-block;
+    width: 200px;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, lg) - 1) {
+    &_vertical {
+      border-radius: 0;
+      gap: 0.5em;
+      margin: 0;
+      width: 100vw;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm) - 1) {
+    flex-direction: column;
+    &_horizontal {
+      &__container > div > span:first-child {
+        width: 100px;
+      }
+
+      &__avatar {
+        width: 100%;
+        aspect-ratio: 1;
+      }
+
+      &__header {
+        flex-direction: column-reverse;
+      }
+
+      & h4 {
+        font-size: medium;
+        padding: 0.5em 0;
+      }
+    }
+  }
+}
