@@ -1,0 +1,82 @@
+@import "../../scss/constants";
+@import "../../scss/classes";
+
+.header {
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 1em;
+  @extend .mount;
+
+  &_theme-dark {
+    @extend .mount_theme-dark;
+  }
+
+  align-items: center;
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  &__login {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  }
+
+  &__panda {
+    margin: 0 0.5em;
+  }
+  &__divider {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  &_theme-dark &__divider {
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  &_theme-dark  {
+    & h4 {
+      color: $base-color_dark;
+    }
+    & button {
+      color: $base-color_dark;
+    }
+  }
+
+
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, lg) - 1 ) {
+    border-radius: 0;
+    margin: 0;
+    &__logo {
+      display: none;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm) - 1 ) {
+    .header__n-title {
+      display: none;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, md) - 1 ) {
+    &__user {
+      display: none !important;
+    }
+
+    &__e-title {
+      display: none !important;
+    }
+  }
+
+}

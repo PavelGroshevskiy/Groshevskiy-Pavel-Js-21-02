@@ -1,0 +1,10 @@
+.theme_switcher {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.theme_switcher__label {
+    font-weight: bold;
+    margin-right: 0.5em;
+}

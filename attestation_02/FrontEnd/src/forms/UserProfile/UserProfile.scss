@@ -1,0 +1,60 @@
+@import "../../scss/constants";
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+
+  &__post {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap: 1em;
+    justify-content: center;
+  }
+  &__show {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    width: 100%;
+
+    @media (min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg) - 1 ) {
+      gap: 0.2em;
+      width: calc(50% - 0.25em);
+    }
+    @media (min-width: map-get($grid-breakpoints, lg)) and (max-width: map-get($grid-breakpoints, xl) - 1 ) {
+      width: calc(33.3% - 0.65em);
+    }
+    @media (min-width: map-get($grid-breakpoints, xl)) and (max-width: map-get($grid-breakpoints, xxx) - 1 ) {
+      width: calc(25% - 0.75em);
+    }
+    @media (min-width: map-get($grid-breakpoints, xxx)) and (max-width: map-get($grid-breakpoints, inf) - 1 ) {
+      width: calc(20% - 0.8em);
+    }
+
+  }
+
+  &__pager {
+    color: black;
+    padding: 2em;
+    text-align: right;
+  }
+
+
+  &_theme-dark &__pager {
+    filter: invert(100%);
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, lg) - 1 ) {
+    &__divider {
+      display: none;
+    }
+    &__post {
+      margin-top: 0.2em;
+      gap: 0.2em;
+      padding: 0.2em;
+    }
+  }
+
+}
