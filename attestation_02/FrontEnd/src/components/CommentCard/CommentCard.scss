@@ -1,0 +1,48 @@
+@import "../../scss/constants";
+@import "../../scss/classes";
+
+.comment-card {
+  display: flex;
+  box-sizing: border-box;
+  border: $base-border;
+  border-radius: $base-radius*0.5;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.5em;
+  gap: 0.5em;
+  margin: 0;
+  width: calc(50% - 0.25em);
+
+  &__header {
+    font-size: x-small;
+    width: 100%;
+    display: flex;
+    column-gap: 0.5em;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+  }
+
+  &__text {
+    font-size: smaller;
+  }
+
+  &__date {
+    color: grey;
+  }
+
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm) - 1 ) {
+    width: calc(100% - 0.25em);
+  }
+}
+
+
+

@@ -1,0 +1,55 @@
+@import "../../scss/constants";
+
+.modal {
+  &__wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    left: 0;
+    top: 0;
+    right:0;
+    min-height: 100vh;
+    max-height: 100%;
+    overflow-y: scroll;
+    z-index: 1001;
+    padding: $base-radius*6;
+    flex: 1;
+  }
+
+  &__overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+  }
+
+  &__close {
+    position: fixed;
+    right: 2em;
+    top: 2em;
+    z-index: 1002;
+  }
+
+  &__close svg {
+    width: 3em;
+    height: 3em;
+  }
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm) - 1 ) {
+    &__wrapper {
+      padding: $base-radius;
+    }
+    &__close {
+      right: -15px;
+      top: 5px;
+      transform: scale(70);
+    }
+  }
+}
+
+.no_scroll {
+  overflow: hidden;
+}
